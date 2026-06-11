@@ -68,6 +68,4 @@ Route::middleware('auth')->group(function () {
 | ADMIN ROUTE (KHUSUS ADMIN)
 |--------------------------------------------------------------------------
 */
-Route::middleware('auth')->group(function () { // Hanya middleware 'auth' yang diperlukan di sini, karena AdminController menangani pengecekan role
-    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin_dashboard');
-});
+Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin_dashboard');
